@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Original sentence:</strong>
+  <%= @text.sentence %>
+</p>
+
+<p>
+  <strong>Reversed sentence:</strong>
+  <%= @text.sentence.reverse! %>
+</p>
+<p>
+<strong>Word count:</strong>
+  <%= @text.sentence.split.size %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_path(@text) %> |
+<%= link_to 'Back', texts_path %>
