@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Original sentence</th>
+      <th>Length</th>
       <th>Reversed sentence</th>
       <th>Word count</th>
       <th></th>
@@ -14,9 +15,9 @@
     <% @texts.each do |text| %>
       <tr>
         <td><%= text.sentence %></td>
+        <td><%= text.sentence.length %></td>
         <td><%= text.sentence.reverse! %></td>
         <td><%= text.sentence.split.size %></td>
-
         <td><%= link_to 'Show', text %></td>
         <td><%= link_to 'Edit', edit_text_path(text) %></td>
         <td><%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
